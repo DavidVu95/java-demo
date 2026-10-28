@@ -11,8 +11,10 @@ This is a demo application which provides a real world representation of a REST 
  
 ## Run
  ```sh
- $ java -jar target/hello-shiftleft-0.0.1.jar
+ $ java -javaagent:/opt/zen/agent.jar -jar target/hello-shiftleft-0.0.1.jar
 ```
+
+Zen (Aikido firewall) must be installed in `/opt/zen` (download `zen.zip` from https://github.com/AikidoSec/firewall-java/releases/download/1.1.32/zen.zip and unzip it there). Set `AIKIDO_TOKEN` to report to Aikido, and `AIKIDO_BLOCK=true` to enable blocking mode.
 
 ## Exercise Vulnerabilites and Exposures
 Once the application starts, vulnerabilites and exposures in it can be tested with API access patterns described below and through example scripts provided in the [exploits](https://github.com/ShiftLeftSecurity/HelloShiftLeft/tree/master/exploits) directory. These are summarized below:  
